@@ -34,12 +34,12 @@ pipeline {
         }
       }
     }
-    stage('Deploy') {
-      steps {
-        // Deploy steps here
-      }
-    }
-  }
+  //   stage('Deploy') {
+  //     steps {
+  //       // Deploy steps here
+  //     }
+  //   }
+  // }
   post {
     success {
       echo 'Build and test stages completed successfully.'
