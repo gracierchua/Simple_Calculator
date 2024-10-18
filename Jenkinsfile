@@ -11,7 +11,8 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        // Use 'bat' for Windows environment
+        sh 'python3 -m venv venv' // Create a virtual environment named venv
+        sh 'source venv/bin/activate'
         sh 'python3 -m pip install -r requirements.txt'
       }
     }
