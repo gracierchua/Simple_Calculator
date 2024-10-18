@@ -11,7 +11,7 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        sh 'pipx install requirements.txt'
+        sh 'pipx install -r requirements.txt'
       }
     }
 
