@@ -17,7 +17,7 @@ pipeline {
         // # Activate the virtual environment
         sh 'source venv/bin/activate'
         // # Install requirements within the virtual environment
-        sh 'pip install -r requirements.txt'
+        sh 'pip3 install -r requirements.txt'
       }
     }
 
