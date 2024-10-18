@@ -27,7 +27,8 @@ pipeline {
         // Test steps here
         script {
           // Continue to the next stage even if tests fail
-          catchError(buildResult: 'UNSTABLE', stageResult:'FAILURE') {
+          catchError(buildResult: 'UNSTABLE', stageResult:'FAILURE') 
+          {
             echo 'Running unit tests...'
             bat 'pytest --maxfail=1 --disable-warnings'
           }
@@ -48,4 +49,5 @@ pipeline {
       echo 'One or more stages failed. Check the logs for details.'
     }
   }
+}
 }
