@@ -11,9 +11,7 @@ pipeline {
 
     stage('Install Dependencies') {
       steps {
-        sh 'python3 -m venv venv' // Create a virtual environment named venv
-        sh 'source venv/bin/activate'
-        sh 'python3 -m pip install -r requirements.txt'
+        sh 'pipx install requirements.txt'
       }
     }
 
