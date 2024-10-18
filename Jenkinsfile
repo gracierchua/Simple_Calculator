@@ -13,9 +13,9 @@ pipeline {
       steps {
         // sh 'pipx install -r requirements.txt'
         // # Create a virtual environment manually
-        python3 -m venv venv
+        sh 'python3 -m venv venv'
         // # Activate the virtual environment
-        source venv/bin/activate
+        sh 'source venv/bin/activate'
         // # Install requirements within the virtual environment
         sh 'pip install -r requirements.txt'
       }
